@@ -23,19 +23,20 @@ TBD
 
 | key | value | required | note |
 | --- | --- | --- | --- |
-| folder | string | yes | |
-| dist | string | optional | default: `./` |
-| dt | string `yyyyMMdd` | optional | default: `19700101` |
+| folder | string | yes | import target folder |
+| token | string | yes | boostnote api token |
+| dist | string | optional | export directory. default: `./` |
+| dt | string `yyyyMMdd` | optional | |
 
 ## outputs (directory)
 
 ```
-target_directory
-├── folder_name
+folder
+├── 202106
 │   └── title1.md
 │   └── title2.md
 │   └── title3.md
-├── folder_name
+├── 202104
 │   └── title1.md
 │   └── title2.md
 └── dt.txt // executed timestamp

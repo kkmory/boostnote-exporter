@@ -43,7 +43,7 @@ type BoostNoteDoc struct {
 	Version        int64            `json:"version"`
 	UserID         string           `json:"userId"`
 	WorkspaceID    string           `json:"workspaceId"`
-	Tags           []string         `json:"tags"`
+	Tags           []BoostNoteTag   `json:"tags"`
 	Head           BoostNoteDocHead `json:"head"`
 	ShareLink      string           `json:"shareLink"`
 	Assignees      []string         `json:"assignees"`
@@ -64,4 +64,11 @@ type BoostNoteCreator struct {
 	DisplayName string    `json:"displayName"`
 	CreatedAt   time.Time `json:"createdAt"`
 	UpdatedAt   time.Time `json:"updatedAt"`
+}
+
+type BoostNoteTag struct {
+	ID        string    `json:"id"`
+	Text      string    `json:"text"`
+	TeamID    string    `json:"teamId"`
+	CreatedAt time.Time `json:"createdAt"`
 }
