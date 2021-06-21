@@ -20,12 +20,12 @@ func (s ExportService) Export(folder, dist, dt string) (int64, error) {
 		PreviousProcessedAt: pv,
 	}
 
-	var count int64
 	f, err := s.Boostnote.GetFolderByName(config.FolderName)
 	if err != nil {
 		return 0, err
 	}
 
+	var count int64
 	for _, d := range f.ChildDocsIDs {
 		doc, err := s.Boostnote.ImportDocByID(d)
 		if err != nil {
